@@ -1,5 +1,3 @@
-# NETWORKWALKS-Siddhartha-Gupta-B084M-WK3-PASSWORD-CRACKING
-
 # Password Cracking & PDF Hash Recovery Assessment (Week 3)
 
 Cryptographic hash extraction and offline dictionary-based password auditing using `pdf2john` and John the Ripper / Johnny.
@@ -47,36 +45,3 @@ pdf2john pdf3.pdf > pdf3.hash
 
 john --wordlist=/usr/share/wordlists/rockyou.txt pdf1.hash pdf2.hash pdf3.hash
 john --show pdf1.hash pdf2.hash pdf3.hash
-```` ``` ````
-
----
-
-### Step 2: Verification & File Access Proof
-
-#### Target 1: `pdf1`
-* **Locked Prompt:**
-  ![PDF 1 Password Prompt](01-pdf1-password-prompt.png)
-* **Unlocked Verification:**
-  ![PDF 1 Unlocked](02-pdf1-unlocked.png)
-
-#### Target 2: `pdf2`
-* **Locked Prompt:**
-  ![PDF 2 Password Prompt](03-pdf2-password-prompt.png)
-* **Unlocked Verification:**
-  ![PDF 2 Unlocked](04-pdf2-unlocked.png)
-
-#### Target 3: `pdf3`
-* **Locked Prompt:**
-  ![PDF 3 Password Prompt](05-pdf3-password-prompt.png)
-* **Unlocked Verification:**
-  ![PDF 3 Unlocked](06-pdf3-unlocked.png)
-
----
-
-## Security Impact & Remediation Recommendations
-
-* **Attacker Impact:** Once an attacker obtains an encrypted document, password cracking occurs completely offline at high speed without triggering account lockouts or network alerts. Weak, short, or dictionary-based passwords are recovered within seconds.
-* **Remediation:**
-  1. Enforce strong, high-entropy passphrases (minimum 12–16 characters mixing uppercase, lowercase, numbers, and symbols) that do not appear in common wordlists.
-  2. Use modern AES-256 PDF encryption standards rather than legacy RC4/weak revision handlers.
-  3. Distribute sensitive documents via access-controlled portals with multi-factor authentication (MFA) instead of relying solely on static file passwords.
