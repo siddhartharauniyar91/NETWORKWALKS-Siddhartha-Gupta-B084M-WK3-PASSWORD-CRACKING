@@ -47,6 +47,7 @@ pdf2john pdf3.pdf > pdf3.hash
 
 john --wordlist=/usr/share/wordlists/rockyou.txt pdf1.hash pdf2.hash pdf3.hash
 john --show pdf1.hash pdf2.hash pdf3.hash
+```` ``` ````
 
 ---
 
